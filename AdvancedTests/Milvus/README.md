@@ -18,7 +18,7 @@ The advanced tests for Milvus include scenarios such as performance benchmarking
   results = milvus.benchmark_performance(vector_db)
 ```
 
-## Complex Query Handling
+### Complex Query Handling
 - **Purpose**: Assess Milvus's ability to efficiently handle complex queries with multiple parameters.
 - **Details**: Focuses on search accuracy, response time, and resource usage.
 - **Example**:
@@ -27,7 +27,7 @@ The advanced tests for Milvus include scenarios such as performance benchmarking
 results = milvus.advanced_search("complex query", vector_db)
 ```
 
-## Indexing Strategies
+### Indexing Strategies
 - **Purpose**: Evaluate different indexing strategies to optimize query speed and resource usage.
 = **Details**: Tests various indexing techniques for their impact on performance.
 - **Example**:
@@ -36,7 +36,7 @@ results = milvus.advanced_search("complex query", vector_db)
 index_info = milvus.create_advanced_index("custom_index", vector_db)
 ```
 
-## Scalability Testing
+### Scalability Testing
 - **Purpose**: Determine the scalability of Milvus when dealing with large datasets and high query volumes.
 - **Details**: Examines the database's ability to maintain performance with increasing load.
 - **Example**:
