@@ -4,48 +4,39 @@ This folder contains a collection of standard tests for the Vector Databases, in
 
 ## Introduction
 
-The standard tests folder includes a variety of tests that cover different aspects of the Vector Databases, including installation, usage, and advanced features. These tests are designed to help you get started with using the Vector Databases and to provide a baseline for testing and validation.
+The standard tests folder includes a variety of tests that cover different aspects of the Vector Databases, including installation, usage, and basic features. These tests are designed to help you get started with using the Vector Databases and to provide a baseline for testing and validation.
 
 ## Test Scenarios
 
 The standard tests folder includes the following test scenarios:
 
-* Installation tests: These tests verify that the Vector Databases can be installed correctly and that the required dependencies are met.
-* Usage tests: These tests verify that the Vector Databases can be used correctly and that the expected results are returned.
-* Advanced tests: These tests verify that the advanced features of the Vector Databases are working correctly and that the expected results are returned.
+### Installation Tests
+- **Purpose**: Verify that the Vector Databases can be installed correctly and that the required dependencies are met.
+- **Coverage**: Installation steps, configuration checks, and validation of setup.
+
+### Usage Tests
+- **Purpose**: Ensure that the Vector Databases can be used correctly and that they return expected results.
+- **Coverage**: Basic operations such as data insertion, retrieval, and simple queries.
+
+### Basic Features
+- **Purpose**: Validate that the basic features of the Vector Databases are functioning as expected.
+- **Coverage**: Index creation, basic search functionalities, and standard query operations.
 
 ## Using the Vector Databases
 
-Once you have installed the Vector Databases, you can use them in your playground environment. Here are some examples of how to use each VectorDB:
+Once you have installed the Vector Databases, you can use them in your development environment. Below are examples of how to use each Vector Database:
 
 ### pgvector
 
-To use pgvector, you'll need to create a new instance of the `pgvector` class and pass in the required parameters. Here's an example:
+To use pgvector, initialize the database connection with the required parameters:
+
 ```python
 import pgvector
 
-vector_db = pgvector.PgVector( host='your_host', port=5432, database='your_database', username='your_username', password='your_password' )
-
-
-##ChromaDB
-To use chromadb, you'll need to create a new instance of the chromadb class and pass in the required parameters. Here's an example:
-
-import chromadb
-
-vector_db = chromadb.ChromeDB( host='your_host', port=5432, database='your_database', username='your_username', password='your_password' )
-
-
-##Milvus
-To use milvus, you'll need to create a new instance of the milvus class and pass in the required parameters. Here's an example:
-
-import milvus
-
-vector_db = milvus.Milvus( host='your_host', port=5432, database='your_database', username='your_username', password='your_password' )
-
-
-##Qdrant
-To use qdrant, you'll need to create a new instance of the qdrant class and pass in the required parameters. Here's an example:
-
-import qdrant
-
-vector_db = qdrant.Qdrant( host='your_host', port=5432, database='your_database', username='your_username', password='your_password' )
+vector_db = pgvector.PgVector(
+    host='your_host', 
+    port=5432, 
+    database='your_database', 
+    username='your_username', 
+    password='your_password'
+)
