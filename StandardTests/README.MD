@@ -30,7 +30,7 @@ Once you have installed the Vector Databases, you can use them in your developme
 
 To use pgvector, initialize the database connection with the required parameters:
 
-```python
+python
 import pgvector
 
 vector_db = pgvector.PgVector(
@@ -40,3 +40,46 @@ vector_db = pgvector.PgVector(
     username='your_username', 
     password='your_password'
 )
+
+###ChromaDB
+
+To use ChromaDB, initialize the database connection with the required parameters:
+
+import chromadb
+
+vector_db = chromadb.ChromeDB(
+    host='your_host', 
+    port=5432, 
+    database='your_database', 
+    username='your_username', 
+    password='your_password'
+)
+
+###Milvus
+To use Milvus, initialize the database connection with the required parameters:
+
+import milvus
+
+vector_db = milvus.Milvus(
+    host='your_host', 
+    port=5432, 
+    database='your_database', 
+    username='your_username', 
+    password='your_password'
+)
+
+###Qdrant
+To use Qdrant, initialize the database connection with the required parameters:
+
+import qdrant
+
+vector_db = qdrant.Qdrant(
+    host='your_host', 
+    port=5432, 
+    database='your_database', 
+    username='your_username', 
+    password='your_password'
+)
+
+###Contribution and Feedback
+We welcome contributions to expand these test scenarios. F
