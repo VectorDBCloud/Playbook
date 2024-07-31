@@ -17,7 +17,7 @@ The advanced tests for Milvus include scenarios such as performance benchmarking
   results = milvus.benchmark_performance(vector_db)
 ```
 
-# Complex Query Handling
+## Complex Query Handling
 - **Purpose**: Assess Milvus's ability to efficiently handle complex queries with multiple parameters.
 - **Details**: Focuses on search accuracy, response time, and resource usage.
 - **Example**:
@@ -26,7 +26,7 @@ The advanced tests for Milvus include scenarios such as performance benchmarking
 results = milvus.advanced_search("complex query", vector_db)
 ```
 
-# Indexing Strategies
+## Indexing Strategies
 - **Purpose**: Evaluate different indexing strategies to optimize query speed and resource usage.
 = **Details**: Tests various indexing techniques for their impact on performance.
 - **Example**:
@@ -35,7 +35,7 @@ results = milvus.advanced_search("complex query", vector_db)
 index_info = milvus.create_advanced_index("custom_index", vector_db)
 ```
 
-# Scalability Testing
+## Scalability Testing
 - **Purpose**: Determine the scalability of Milvus when dealing with large datasets and high query volumes.
 - **Details**: Examines the database's ability to maintain performance with increasing load.
 - **Example**:
@@ -44,24 +44,24 @@ index_info = milvus.create_advanced_index("custom_index", vector_db)
 results = milvus.test_scalability(data_volume=1000000, vector_db=vector_db)
 ```
 
-# Advanced Functions
+## Advanced Functions
 
-## Searching
+### Searching
 `milvus.advanced_search(query, vector_db)`: Executes complex searches using detailed criteria.
 - **Example**: `milvus.advanced_search("deep learning applications", vector_db)`
 - **Returns**: A list of results matching the query.
 
-## Insertion
+### Insertion
 `milvus.insert_advanced(vector, vector_db)`: Inserts a vector into the database with advanced metadata.
 - **Example**: `milvus.insert_advanced([0.1, 0.5, 0.3], vector_db)`
 - **Returns**: The ID of the inserted vector.
 
-## Update
+### Update
 `milvus.update_vector(vector_id, new_data, vector_db)`: Updates an existing vector in the database.
 - **Example**: `milvus.update_vector(123, [0.2, 0.6, 0.4], vector_db)`
 - **Returns**: The ID of the updated vector.
 
-## Deletion
+### Deletion
 `milvus.delete_vector(vector_id, vector_db)`: Deletes a vector from the database.
 - **Example**: `milvus.delete_vector(123, vector_db)`
 - **Returns**: Confirmation of deletion.
