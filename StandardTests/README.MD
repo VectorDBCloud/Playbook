@@ -30,6 +30,7 @@ Once you have installed the Vector Databases, you can use them in your developme
 
 To use pgvector, initialize the database connection with the required parameters:
 
+'''
 python
 import pgvector
 
