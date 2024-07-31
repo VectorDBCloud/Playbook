@@ -41,11 +41,13 @@ vector_db = pgvector.PgVector(
     username='your_username', 
     password='your_password'
 )
+```
 
 ### ChromaDB
 
 To use ChromaDB, initialize the database connection with the required parameters:
 
+```
 import chromadb
 
 vector_db = chromadb.ChromeDB(
@@ -55,10 +57,12 @@ vector_db = chromadb.ChromeDB(
     username='your_username', 
     password='your_password'
 )
+```
 
 ### Milvus
 To use Milvus, initialize the database connection with the required parameters:
 
+```
 import milvus
 
 vector_db = milvus.Milvus(
@@ -68,10 +72,12 @@ vector_db = milvus.Milvus(
     username='your_username', 
     password='your_password'
 )
+```
 
 ### Qdrant
 To use Qdrant, initialize the database connection with the required parameters:
 
+```
 import qdrant
 
 vector_db = qdrant.Qdrant(
@@ -81,6 +87,7 @@ vector_db = qdrant.Qdrant(
     username='your_username', 
     password='your_password'
 )
+```
 
 ### Contribution and Feedback
 We welcome contributions to expand these test scenarios. For contributing new tests, please refer to our Contribution Guidelines. If you encounter issues or have suggestions, please use the issue tracker.
