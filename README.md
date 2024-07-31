@@ -21,10 +21,10 @@ The Playbook provides practical "recipes" for various use cases and technical ch
 
 Explore our detailed test scenarios, categorized by vector database technology:
 
-- **[pgvector](test-scenarios/pgvector/)**: Test cases and scenarios specific to pgvector.
-- **[Milvus](test-scenarios/Milvus/)**: Scenarios designed to test Milvus's capabilities and performance.
-- **[Qdrant](test-scenarios/Qdrant/)**: Test setups for Qdrant applications.
-- **[ChromaDB](test-scenarios/ChromaDB/)**: Specific scenarios for testing ChromaDB functionalities.
+- **[pgvector](StandardTests/pgvector/)**: Test cases and scenarios specific to pgvector.
+- **[Milvus](StandardTests/Milvus/)**: Scenarios designed to test Milvus's capabilities and performance.
+- **[Qdrant](StandardTests/Qdrant/)**: Test setups for Qdrant applications.
+- **[ChromaDB](StandardTests/ChromaDB/)**: Specific scenarios for testing ChromaDB functionalities.
 
 ## Implementation Guides
 
