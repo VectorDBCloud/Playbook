@@ -8,68 +8,46 @@ The advanced tests for ChromaDB include scenarios for performance benchmarking, 
 
 ## Test Scenarios
 
-### Performance Benchmarking
-- **Purpose**: Assess the performance of ChromaDB under different load conditions.
-- **Details**: Measure query response times, indexing speeds, and throughput.
-- **Example**: 
+### Create a Tenant with Custom Permissions
+- **Purpose**: Demonstrates how to create tenants with custom permissions.
+- **File**: `CreateATenantWithCustomPermissions.py`
 
-  ```
-  python
-  results = chromadb.benchmark_performance(vector_db)
-  ```
+### Search with Custom Query
+- **Purpose**: Illustrates how to perform searches using custom query logic.
+- **File**: `SearchWithCustomQuery.py`
 
-# Complex Query Handling
-- **Purpose**: Test ChromaDB's ability to handle complex queries with multiple criteria and filters.
-- **Details**: Evaluate search accuracy, query response times, and resource utilization.
-- **Example**:
+### Upsert with Custom Logic
+- **Purpose**: Shows how to implement upsert operations with custom logic.
+- **File**: `UpsertWithCustomLogic.py`
 
-```
-results = chromadb.advanced_search("multi-criteria query", vector_db)
-```
+## Advanced Functions
 
-# Indexing Strategies
-- **Purpose**: Evaluate the effectiveness of different indexing strategies in ChromaDB.
-- **Details**: Compare index creation times, space efficiency, and improvements in query speed.
-- **Example**:
+### Searching
+- **`chromadb.advanced_search(query, vector_db)`**: Conducts advanced searches using complex criteria.
+  - **Example**: `chromadb.advanced_search("deep learning models", vector_db)`
+  - **Returns**: A list of search results matching the query.
 
-```
-index_info = chromadb.create_advanced_index("custom_index", vector_db)
-```
+### Insertion
+- **`chromadb.insert_advanced(vector, vector_db)`**: Inserts a vector with additional metadata for advanced usage.
+  - **Example**: `chromadb.insert_advanced([0.1, 0.5, 0.3], vector_db)`
+  - **Returns**: The ID of the inserted vector.
 
-# Scalability Testing
-- **Purpose**: Determine how well ChromaDB scales with increasing data volumes and concurrent queries.
-- **Details**: Test data sharding, distributed query processing, and performance degradation.
-- **Example**:
+### Update
+- **`chromadb.update_vector(vector_id, new_data, vector_db)`**: Updates an existing vector's data.
+  - **Example**: `chromadb.update_vector(123, [0.2, 0.6, 0.4], vector_db)`
+  - **Returns**: The ID of the updated vector.
 
-```
-results = chromadb.test_scalability(data_volume=1000000, vector_db=vector_db)
-```
-
-# Advanced Functions
-
-## Searching
-`chromadb.advanced_search(query, vector_db)`: Conducts advanced searches using complex criteria.
-- **Example**: `chromadb.advanced_search("deep learning models", vector_db)`
-- **Returns**: A list of search results matching the query.
-
-## Insertion
-`chromadb.insert_advanced(vector, vector_db)`: Inserts a vector with additional metadata for advanced usage.
-- **Example**: `chromadb.insert_advanced([0.1, 0.5, 0.3], vector_db)`
-- **Returns**: The ID of the inserted vector.
-
-## Update
-`chromadb.update_vector(vector_id, new_data, vector_db)`: Updates an existing vector's data.
-- **Example**: `chromadb.update_vector(123, [0.2, 0.6, 0.4], vector_db)`
-- **Returns**: The ID of the updated vector.
-
-## Deletion
-`chromadb.delete_vector(vector_id, vector_db)`: Deletes a vector from the database.
-- **Example**: `chromadb.delete_vector(123, vector_db)`
-- **Returns**: Confirmation of deletion.
+### Deletion
+- **`chromadb.delete_vector(vector_id, vector_db)`**: Deletes a vector from the database.
+  - **Example**: `chromadb.delete_vector(123, vector_db)`
+  - **Returns**: Confirmation of deletion.
 
 
-# Contribution and Feedback
+## Contribution and Feedback
+
 We welcome contributions to enhance these advanced test scenarios. Please refer to our Contribution Guidelines for more information. If you have any issues or suggestions, feel free to use the issue tracker.
 
-# License
+
+## License
+
 This content is licensed under the MIT License. See the LICENSE file for more details.
