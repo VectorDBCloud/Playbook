@@ -1,6 +1,3 @@
-Thank you for providing this script. Let's update it to align with our standard format, incorporate the use of environment variables for the API URL and key, and handle the data import more robustly. Here's an improved version of the script:
-
-```python
 import os
 import requests
 import sys
