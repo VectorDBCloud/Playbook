@@ -2,13 +2,48 @@
 ![Python](https://img.shields.io/badge/python-3.7%2B-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
+## Table of Contents
+
+- [Advanced Tests](#advanced-tests)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Supported Vector Databases](#supported-vector-databases)
+- [Test Scenarios by Database](#test-scenarios-by-database)
+  - [pgvector](#pgvector)
+  - [ChromaDB](#chromadb)
+  - [Milvus](#milvus)
+  - [Qdrant](#qdrant)
+- [Usage](#usage)
+- [Important Notes](#important-notes)
+- [Advanced Functions by Database](#advanced-functions-by-database)
+  - [pgvector](#pgvector-1)
+  - [ChromaDB](#chromadb-1)
+  - [Milvus](#milvus-1)
+  - [Qdrant](#qdrant-1)
+- [Interpreting Test Results](#interpreting-test-results)
+- [Troubleshooting](#troubleshooting)
+- [Contribution and Feedback](#contribution-and-feedback)
+- [Disclaimer](#disclaimer)
+
 # Advanced Tests
 
 This folder contains a collection of advanced test scenarios for Vector Databases, focusing on complex functionalities and optimizations. These tests explore advanced use cases and push the capabilities of the databases.
 
 ## Introduction
 
-The advanced tests cover scenarios beyond basic operations, including custom indexing, complex queries, and custom logic for operations like upsert. These tests help in understanding the advanced features and capabilities of the Vector Databases when used with Vector Database Cloud.
+Vector Database Cloud is a platform that provides managed vector database services for various vector database technologies. The advanced tests in this repository cover scenarios beyond basic operations, including custom indexing, complex queries, and custom logic for operations like upsert. These tests help in understanding the advanced features and capabilities of the Vector Databases when used with Vector Database Cloud.
+
+## Prerequisites
+
+- Python 3.7+
+- `requests` library
+- `numpy` library
+- `sentence-transformers` library
+
+Install the required libraries using:
+```
+pip install requests numpy sentence-transformers
+```
 
 ## Supported Vector Databases
 
@@ -119,7 +154,31 @@ python <database_name>/<script_name>.py
   - **Example**: `upsert_with_custom_logic("my_collection", 1, [0.1, 0.2, 0.3], {"metadata": "value"}, lambda x: x + 0.1)`
   - **Returns**: Result of the upsert operation.
 
-  
+ 
+## Interpreting Test Results
+
+After running the tests, you'll receive output detailing the performance and behavior of each operation. Key aspects to look for include:
+
+- Successful creation of collections/tenants with custom parameters
+- Accurate search results matching the given queries
+- Correct application of custom logic in upsert operations
+- Proper handling of custom filters and delete operations
+
+ ## Troubleshooting
+
+If you encounter issues:
+
+1. Ensure all environment variables are correctly set.
+2. Check your internet connection and API endpoint accessibility.
+3. Verify that you have the correct permissions for the Vector Database Cloud services.
+4. For specific error messages, refer to the documentation of the respective vector database or create an issue in this repository.
+
+Common issues and solutions:
+- "API key not recognized": Double-check your API key and ensure it's set correctly in the environment variables.
+- "Collection not found": Verify that you're using the correct collection name and that it exists in your Vector Database Cloud instance.
+- "Invalid vector dimension": Ensure that the dimension of your vectors matches the dimension specified when creating the collection.
+
+ 
 ## Contribution and Feedback
 
 We encourage contributions to enhance these advanced test scenarios. For contributing new tests or suggesting improvements, please refer to our [Contribution Guidelines](../CONTRIBUTING.md). If you encounter issues or have suggestions, please use the issue tracker.
