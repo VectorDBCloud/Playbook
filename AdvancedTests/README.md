@@ -2,6 +2,10 @@
 ![Python](https://img.shields.io/badge/python-3.7%2B-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
+# Advanced Tests
+
+This folder contains a collection of advanced test scenarios for Vector Databases, focusing on complex functionalities and optimizations. These tests explore advanced use cases and push the capabilities of the databases.
+
 ## Table of Contents
 
 - [Advanced Tests](#advanced-tests)
@@ -25,9 +29,6 @@
 - [Contribution and Feedback](#contribution-and-feedback)
 - [Disclaimer](#disclaimer)
 
-# Advanced Tests
-
-This folder contains a collection of advanced test scenarios for Vector Databases, focusing on complex functionalities and optimizations. These tests explore advanced use cases and push the capabilities of the databases.
 
 ## Introduction
 
