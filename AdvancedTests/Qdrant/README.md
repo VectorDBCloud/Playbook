@@ -83,7 +83,3 @@ We welcome contributions to enhance these advanced test scenarios. Please refer 
 ## Disclaimer
 
 These scripts are provided as examples and may need to be adapted to your specific use case and production environment. They are not guaranteed to work in all scenarios and should be thoroughly tested before use in any critical or production systems. Always follow best practices for security and performance when working with databases and APIs. The authors and contributors of this repository are not responsible for any damages or losses that may result from the use of these scripts.
-
-## License
-
-This content is licensed under the MIT License. See the LICENSE file for more details.
